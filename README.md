@@ -1,4 +1,6 @@
-## Hi there 👋
+## bucksh0t.dev
+> Bir ihtimal daha var o da ölmek mi dersin?
+[Official Website](https://bucksh0t.dev)
 
 <!--
 **bucksh0tdev/bucksh0tdev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
