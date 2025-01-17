@@ -1,5 +1,6 @@
 ## bucksh0t.dev
 > Bir ihtimal daha var o da ölmek mi dersin?
+
 [Official Website](https://bucksh0t.dev)
 
 <!--
