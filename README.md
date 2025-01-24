@@ -1,5 +1,5 @@
 ## bucksh0t.dev
-> Bir ihtimal daha var o da ölmek mi dersin?
+> Şans sigaramı bile tersten yaktım.
 
 [Official Website](https://bucksh0t.dev)
 
