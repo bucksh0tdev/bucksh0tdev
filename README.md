@@ -1,5 +1,5 @@
 ## bucksh0t.dev
-> Şans sigaramı bile tersten yaktım.
+> Biz ortam denen çarşının sarrafıyız. Kim altın, kim teneke iyi biliriz.
 
 [Official Website](https://bucksh0t.dev)
 
