@@ -1,5 +1,5 @@
 ## bucksh0t.dev
-> Biz ortam denen çarşının sarrafıyız. Kim altın, kim teneke iyi biliriz.
+> God sends me to the person he wants to punish.
 
 [Official Website](https://bucksh0t.dev)
 
