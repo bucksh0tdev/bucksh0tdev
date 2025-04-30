@@ -1,5 +1,10 @@
+<p align="right"> 
 ## bucksh0t.dev
-<p align="right"> <img src="https://komarev.com/ghpvc/?username=bucksh0tdev&color=blueviolet&style=flat" alt="bucksh0t" /> </p>
+<img src="https://komarev.com/ghpvc/?username=bucksh0tdev&color=blueviolet&style=flat" alt="bucksh0t" />
+
+</p>
+
+
 > God sends me to the person he wants to punish.
 
 [Official Website](https://bucksh0t.dev)
