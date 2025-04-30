@@ -1,25 +1,12 @@
-<p align="right"> 
-## bucksh0t.dev
-<img src="https://komarev.com/ghpvc/?username=bucksh0tdev&color=blueviolet&style=flat" alt="bucksh0t" />
-
+<p align="right" style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
+  <span style="font-size: 24px; font-weight: bold;">bucksh0t.dev</span>
+  <img src="https://komarev.com/ghpvc/?username=bucksh0tdev&color=blueviolet&style=flat" alt="bucksh0t" />
 </p>
 
+<blockquote>
+  God sends me to the person he wants to punish.
+</blockquote>
 
-> God sends me to the person he wants to punish.
-
-[Official Website](https://bucksh0t.dev)
-
-<!--
-**bucksh0tdev/bucksh0tdev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<p align="right">
+  <a href="https://bucksh0t.dev">Official Website</a>
+</p>
