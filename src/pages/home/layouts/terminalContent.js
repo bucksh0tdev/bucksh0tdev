@@ -1,8 +1,22 @@
 const buildTerminalEntries = ({ yearsInIndustry }) => ([
     {
+        command: "cat profile.sys",
+        aliases: ["profile", "id"],
+        type: "profile",
+        avatar: "/libs/bucksh0t.png",
+        avatarAlt: "bucksh0t profile image",
+        previewPath: "/dev/identity/bucksh0t.png",
+        name: "bucksh0t",
+        role: "software architect",
+        shell: "zsh",
+        availability: "freelance.part-time",
+        uptime: "100%",
+        tags: ["Online"],
+    },
+    {
         command: "whoami",
         type: "text",
-        output: `KILIC SARSILMAZ — Software Architect, Senior Full Stack Engineer. ${yearsInIndustry} yıldır sektördeyim. 7 yıldır freelance çalışıyorum.`,
+        output: `KILIC SARSILMAZ — Software Architect, Senior Full Stack Engineer. ${yearsInIndustry} yıldır sektördeyim. ${yearsInIndustry - 5} yıldır freelance çalışıyorum.`,
     },
     {
         command: "cat signal.txt",
@@ -56,6 +70,24 @@ const buildTerminalEntries = ({ yearsInIndustry }) => ([
 ]);
 
 const extraCommandEntries = [
+    {
+        command: "help",
+        aliases: ["?"],
+        type: "list",
+        items: [
+            "profile",
+            "whoami",
+            "signal",
+            "focus",
+            "projects",
+            "services",
+            "stack",
+            "manifesto",
+            "links",
+            "music",
+            "clear",
+        ],
+    },
     {
         command: "music",
         type: "text",

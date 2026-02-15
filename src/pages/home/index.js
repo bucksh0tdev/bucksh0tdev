@@ -1,13 +1,11 @@
-import HeaderLayout from "../../layouts/header.js";
 import FooterLayout from "../../layouts/footer.js";
 import HeroLayout from "./layouts/hero.js";
 
 const HomePage = () => {
     return (
         <div className="page-shell">
-            <div className="bg-orb orb-1" aria-hidden="true"></div>
-            <div className="bg-orb orb-2" aria-hidden="true"></div>
             <div className="bg-grid" aria-hidden="true"></div>
+            <div className="crt-vignette" aria-hidden="true"></div>
 
             <main className="page-main">
                 <div className="mx-auto w-full max-w-6xl px-6 lg:px-10">
@@ -18,15 +16,17 @@ const HomePage = () => {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <div className="terminal-title">bucksh0t@macbook-pro-m4:~</div>
-                            <div className="terminal-status">ONLINE</div>
+                            <div className="terminal-title" data-title="root@bucksh0t-dev:~">root@bucksh0t-dev:~</div>
+                            <div className="terminal-status">ENCRYPTED</div>
                         </div>
                         <div className="terminal-body">
-                            <HeaderLayout />
                             <HeroLayout />
                         </div>
-                        <div className="scanlines" aria-hidden="true"></div>
-                        <div className="terminal-noise" aria-hidden="true"></div>
+                        <div className="terminal-footer-bar">
+                            <span>tty0</span>
+                            <span>utf-8</span>
+                            <span>latency: 12ms</span>
+                        </div>
                     </div>
                 </div>
             </main>

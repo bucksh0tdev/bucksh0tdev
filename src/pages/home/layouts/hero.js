@@ -4,9 +4,11 @@ import TerminalSection from "./TerminalSection.js";
 import TerminalInput from "./TerminalInput.js";
 
 const createId = () => `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+const MAX_USER_LOG = 6;
+const QUICK_COMMANDS = ["help", "profile", "whoami", "focus", "projects", "stack", "links", "music", "clear"];
 
 const HeroLayout = () => {
-    const yearsInIndustry = new Date().getFullYear() - 1997;
+    const yearsInIndustry = new Date().getFullYear() - 2015;
     const baseEntries = useMemo(
         () => buildTerminalEntries({ yearsInIndustry }).map((entry) => ({ ...entry, id: createId() })),
         [yearsInIndustry]
@@ -20,13 +22,9 @@ const HeroLayout = () => {
 
     const scrollToBottom = () => {
         if (typeof window === "undefined") return;
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                const doc = document.documentElement;
-                const top = Math.max(doc.scrollHeight, document.body.scrollHeight) - doc.clientHeight;
-                window.scrollTo({ top, behavior: "smooth" });
-            });
-        });
+        const doc = document.documentElement;
+        const top = Math.max(doc.scrollHeight, document.body.scrollHeight) - doc.clientHeight;
+        window.scrollTo(0, top);
     };
 
     const toggleMusic = () => {
@@ -45,8 +43,8 @@ const HeroLayout = () => {
     const appendUserEntry = (entry) => {
         setUserLog((prev) => {
             const next = [...prev, entry];
-            if (next.length <= 3) return next;
-            return next.slice(next.length - 3);
+            if (next.length <= MAX_USER_LOG) return next;
+            return next.slice(next.length - MAX_USER_LOG);
         });
     };
 
@@ -56,18 +54,6 @@ const HeroLayout = () => {
 
         if (normalized === "clear") {
             setUserLog([]);
-            scrollToBottom();
-            return;
-        }
-
-        if (normalized === "help") {
-            const commands = Object.keys(commandMap).sort().join(", ");
-            appendUserEntry({
-                id: createId(),
-                command: rawCommand,
-                type: "text",
-                output: `Commands: ${commands}, clear`,
-            });
             scrollToBottom();
             return;
         }
@@ -83,6 +69,7 @@ const HeroLayout = () => {
                 id: createId(),
                 command: rawCommand,
                 output: outputOverride ?? match.output,
+                source: "user",
             });
             scrollToBottom();
             return;
@@ -93,6 +80,7 @@ const HeroLayout = () => {
             command: rawCommand,
             type: "text",
             output: `command not found: ${rawCommand}`,
+            source: "user",
         });
         scrollToBottom();
     };
@@ -108,7 +96,7 @@ const HeroLayout = () => {
                     <TerminalSection key={entry.id} entry={entry} />
                 ))}
 
-                <TerminalInput onSubmit={handleCommand} />
+                <TerminalInput onSubmit={handleCommand} suggestions={QUICK_COMMANDS} />
             </section>
             <audio ref={audioRef} src="/libs/music.mp3" preload="auto" style={{ display: "none" }} />
         </div>
