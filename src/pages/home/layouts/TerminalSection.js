@@ -9,12 +9,10 @@ const TerminalSection = ({ entry }) => {
         role,
         tags,
         shell,
-        location,
         availability,
         uptime,
         avatar,
         avatarAlt,
-        previewPath,
     } = entry;
     const isUserEntry = entry.source === "user";
     const isErrorOutput =
